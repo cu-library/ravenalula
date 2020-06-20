@@ -1,0 +1,109 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template in this directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - messages: Status and error messages. Should be displayed prominently.
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.masthead_branding: 'Masthead - Branding' items.
+ * - page.masthead_top_nav: 'Masthead - Top Nav' items.
+ * - page.masthead_action_buttons: 'Masthead - Action Buttons' items.
+ * - page.alert: Alert items.
+ * - page.banner: Banner items.
+ * - page.aside_first: 'Aside First' items.
+ * - page.precontent: Pre-content items.
+ * - page.content: Content items.
+ * - page.postcontent: Post-content items.
+ * - page.aside_second: 'Aside Second' items.
+ * - page.footer: Footer items.
+ * - page.sticky: Sticky items
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+<header>
+  <div id="id-masthead" class="u-block u-block--full">
+    <div class="b-masthead">
+      {{ page.masthead_branding }}
+      <nav>
+        <div class="c-nav c-nav--topnav" role="presentation" aria-label="Main Navigation">
+          {{ page.masthead_top_nav }}
+        </div>
+      </nav>
+      <ul class="masthead__actions">
+        {{ page.masthead_action_buttons }}
+      </ul>
+    </div>
+  </div>
+  {{ page.alert }}
+  {{ page.banner }}
+</header>
+
+{% if page.aside_first or page.aside_second %}
+<div class="l-multicol l-multicol--{% if page.aside_first %}a{% endif %}m{% if page.aside_second %}a{% endif %}">
+{% endif %}
+
+{% if page.aside_first %}
+<aside>
+  {{ page.aside_first }}
+</aside>
+{% endif %}
+
+<main role="main" id="main-content">
+  {{ page.precontent }}
+  {{ page.content }}
+  {{ page.postcontent }}
+</main>
+
+{% if page.aside_second %}
+<aside>
+  {{ page.aside_second}}
+</aside>
+{% endif %}
+
+{% if page.aside_first or page.aside_second %}
+</div> {# close multicol container #}
+{% endif %}
+
+<footer>
+  {{ page.footer }}
+</footer>
+
+{{ page.sticky }}
+
+<!-- Add after the last Footer block -->
+<dialog class="l-overlay-modal">
+    <div class="modal__search u-visually-hidden">
+        <!-- If using, Search block goes here-->
+    </div>
+    <div class="modal__menu u-visually-hidden">
+        <!-- If using, Menu block goes here-->
+    </div>
+    <div class="modal__login u-visually-hidden">
+        <!-- If using, Login block goes here-->
+    </div>
+</dialog>

@@ -1,0 +1,16 @@
+rds:
+  css:
+    base:
+      css/vendor/rds/0.19.9/rds-cu.css: {minified: true, weight: -1}
+  js:
+    js/vendor/rds/0.19.9/rds-cu.js: {minified: true}
+global:
+  css:
+    base: 
+      css/base.css: {}
+    layout: 
+      css/layout.css: {}
+    theme:
+      css/theme.css: {}
+  dependencies:
+    - ravenalula/rds

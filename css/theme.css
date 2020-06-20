@@ -1,0 +1,36 @@
+.contextual .trigger {
+  opacity: 70%;
+}
+
+.focus .contextual .trigger {
+  opacity: 1;
+}
+
+.b-masthead .contextual-region .contextual .contextual-links li {
+  height: auto;
+}
+.b-masthead .contextual-region .contextual .contextual-links li a {
+  outline: none;
+}
+
+.ui-dialog.ui-dialog-off-canvas {
+  z-index: 10002;
+}
+
+body.toolbar-horizontal #id-masthead, body.toolbar-vertical #id-masthead {
+  top: 39px;
+}
+body.toolbar-horizontal.toolbar-horizontal.toolbar-tray-open #id-masthead, body.toolbar-vertical.toolbar-horizontal.toolbar-tray-open #id-masthead {
+  top: 79px;
+}
+
+#toolbar-bar {
+  z-index: 10001;
+  position: fixed;
+}
+
+#toolbar-administration ul li a {
+  font-size: small;
+}
+
+/*# sourceMappingURL=theme.css.map */

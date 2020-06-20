@@ -1,0 +1,20 @@
+name: Ravenalula
+type: theme
+description: 'A Drupal 9 theme based on the Raven Design System.'
+core_version_requirement: ^9
+base theme: stable9
+libraries:
+  - ravenalula/global
+regions:
+  masthead_branding: 'Masthead - Branding'
+  masthead_top_nav: 'Masthead - Top Nav'
+  masthead_action_buttons: 'Masthead - Action Buttons'
+  alert: Alert
+  banner: Banner
+  aside_first: 'Aside First'
+  precontent: Pre-Content
+  content: Content
+  postcontent: Post-Content
+  aside_second: 'Aside Second'
+  footer: Footer
+  sticky: Sticky

@@ -1,0 +1,47 @@
+@use 'vendor/rds/0.19.9/_vars.scss';
+
+// Contextual link edit buttons
+.contextual .trigger {
+  opacity: 70%;
+}
+.focus .contextual .trigger {
+  opacity: 1;
+}
+.b-masthead .contextual-region .contextual .contextual-links li {
+  height: auto;
+  a {
+    outline: none;
+  }
+}
+
+// UI Dialogs should win the z-index fight against the masthead.
+.ui-dialog.ui-dialog-off-canvas {
+  z-index: 10002;
+}
+
+// Toolbar Edits
+// If the toolbar is on the page, bump the masthead down to compensate
+body {
+  &.toolbar-horizontal, &.toolbar-vertical {
+    #id-masthead {
+      top: 39px;
+    }
+    &.toolbar-horizontal.toolbar-tray-open {
+      #id-masthead {
+        top: 79px;
+      }
+    }
+  }
+}
+// Z-index fight! The toolbar should win. It should also always be fixed in place.
+#toolbar-bar {
+  z-index: 10001;
+  position: fixed;
+}
+// The toolbar text should stay small
+#toolbar-administration ul li a {
+  font-size: small;
+}
+
+
+
