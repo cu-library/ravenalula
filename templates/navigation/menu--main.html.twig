@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+
+{#
+  For the main nav menu, we assume a menu depth of two. No need for recursion, and
+  we have to label the first and second depth differently.
+#}
+
+{% if items %}
+  {%
+    set ul_menu_classes =  [
+      'nav__menu',
+      'nav__menu--top',
+    ]
+  %}
+  {% set attributes = attributes.addClass(ul_menu_classes) %}
+  <ul{{ attributes }}>
+    {% for item in items %}
+      {% if item.below %}
+        {%
+          set li_submenu_classes =  [
+            'has-submenu',
+            'c-menupopup',
+          ]
+        %}
+        {% set item_attributes = item.attributes.addClass(li_submenu_classes) %}
+        {% if item.in_active_trail %}
+          {% set item_attributes = item.attributes.addClass('u-active') %}
+        {% endif %}
+        <li{{ item_attributes }}>
+          {% set item_id = 'id-' ~ item.title ~ '-menu'|clean_id %}
+          <button class="nav--menubar__button" aria-expanded="false" aria-controls="{{ item_id|lower }}" aria-disabled="false">
+            <span class="u-visually-hidden">Show submenu for</span>{{ item.title }}
+          </button>
+          <ul id={{ item_id|lower }} class="is-submenu">
+            {% for subitem in item.below %}
+              <li>{{ link(subitem.title, subitem.url) }}</li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% else %}
+        <li{{ item.attributes }}>
+          {{ link(item.title, item.url) }}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}

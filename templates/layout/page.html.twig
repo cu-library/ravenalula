@@ -49,14 +49,8 @@
   <div id="id-masthead" class="u-block u-block--full">
     <div class="b-masthead">
       {{ page.masthead_branding }}
-      <nav>
-        <div class="c-nav c-nav--topnav" role="presentation" aria-label="Main Navigation">
-          {{ page.masthead_top_nav }}
-        </div>
-      </nav>
-      <ul class="masthead__actions">
-        {{ page.masthead_action_buttons }}
-      </ul>
+      {{ page.masthead_top_nav }}
+      {{ page.masthead_action_buttons }}
     </div>
   </div>
   {{ page.alert }}
@@ -97,13 +91,13 @@
 
 <!-- Add after the last Footer block -->
 <dialog class="l-overlay-modal">
-    <div class="modal__search u-visually-hidden">
-        <!-- If using, Search block goes here-->
-    </div>
-    <div class="modal__menu u-visually-hidden">
-        <!-- If using, Menu block goes here-->
-    </div>
-    <div class="modal__login u-visually-hidden">
-        <!-- If using, Login block goes here-->
-    </div>
+  <div class="modal__search u-visually-hidden">
+    <!-- If using, Search block goes here-->
+  </div>
+  <div class="modal__menu u-visually-hidden">
+    <!-- If using, Menu block goes here-->
+  </div>
+  <div class="modal__login u-visually-hidden">
+    <!-- If using, Login block goes here-->
+  </div>
 </dialog>
