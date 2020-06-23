@@ -7,4 +7,6 @@ The "Main navigation" menu is used as the top level navigation. It's correspondi
 region, and have the "Expand all menu items" configuration option enabled.
 
 Each call to action button in the masthead should be it's own block in the "Masthead - Action Buttons" region.
-You will have to override the block template using a name like "block--loginblock.html.twig". 
+You will have to override the block template using a name like "block--loginblock.html.twig".
+
+The "Page title" block must be enabled and placed in the "Banner" block.
