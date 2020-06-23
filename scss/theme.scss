@@ -43,5 +43,7 @@ body {
   font-size: small;
 }
 
-
-
+// Alert Header
+.alert-header-block .contextual-region .contextual{
+  z-index: 1001;
+}

@@ -33,4 +33,8 @@ body.toolbar-horizontal.toolbar-horizontal.toolbar-tray-open #id-masthead, body.
   font-size: small;
 }
 
+.alert-header-block .contextual-region .contextual {
+  z-index: 1001;
+}
+
 /*# sourceMappingURL=theme.css.map */
