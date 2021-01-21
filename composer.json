@@ -1,0 +1,13 @@
+{
+    "name": "cu-library/ravenalula",
+    "description": "A Drupal 9 theme based on the Raven Design System.",
+    "type": "drupal-theme",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Kevin Bowrin",
+            "email": "kevinbowrin@cunet.carleton.ca"
+        }
+    ],
+    "require": {}
+}
