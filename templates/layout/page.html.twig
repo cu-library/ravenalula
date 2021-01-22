@@ -57,11 +57,18 @@
   {{ page.banner }}
 </header>
 
-{% if page.aside_first or page.aside_second %}
-<div class="l-multicol l-multicol--{% if page.aside_first %}a{% endif %}m{% if page.aside_second %}a{% endif %}">
+{# See this issue for details: https://www.drupal.org/project/drupal/issues/953034 #}
+{% set aside_first_rendered = page.aside_first|render %}
+{% set aside_first_exists = aside_first_rendered|striptags('<img><video><drupal-render-placeholder>')|trim is not empty %}
+{% set aside_second_rendered = page.aside_second|render %}
+{% set aside_second_exists = aside_second_rendered|striptags('<img><video><drupal-render-placeholder>')|trim is not empty %}
+
+
+{% if aside_first_exists or aside_second_exists %}
+<div class="l-multicol l-multicol--{% if aside_first_exists %}a{% endif %}m{% if aside_second_exists %}a{% endif %}">
 {% endif %}
 
-{% if page.aside_first %}
+{% if aside_first_exists %}
 <aside>
   {{ page.aside_first }}
 </aside>
@@ -73,13 +80,13 @@
   {{ page.postcontent }}
 </main>
 
-{% if page.aside_second %}
+{% if aside_second_exists %}
 <aside>
   {{ page.aside_second}}
 </aside>
 {% endif %}
 
-{% if page.aside_first or page.aside_second %}
+{% if aside_first_exists or aside_second_exists %}
 </div> {# close multicol container #}
 {% endif %}
 
