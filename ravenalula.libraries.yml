@@ -4,6 +4,12 @@ rds:
       css/vendor/rds/0.19.9/rds-cu.css: {minified: true, weight: -1}
   js:
     js/vendor/rds/0.19.9/rds-cu.js: {minified: true}
+font:
+  css:
+    base:
+      'https://cloud.typography.com/6307052/6118752/css/fonts.css': 
+        type: external
+        minified: true
 global:
   css:
     base: 
@@ -14,3 +20,4 @@ global:
       css/theme.css: {}
   dependencies:
     - ravenalula/rds
+    - ravenalula/font
