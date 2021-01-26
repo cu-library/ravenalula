@@ -1,0 +1,9 @@
+@use 'vendor/rds/0.19.9/_vars.scss';
+
+// List Groups, mostly used in the admin sections.
+dl.list-group {
+  dt.list-group__link {
+    margin: 15px 0px 5px 0px;
+  }
+}
+

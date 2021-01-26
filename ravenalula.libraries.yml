@@ -12,10 +12,12 @@ font:
         minified: true
 global:
   css:
-    base: 
+    base:
       css/base.css: {}
-    layout: 
+    layout:
       css/layout.css: {}
+    component:
+      css/component.css: {}
     theme:
       css/theme.css: {}
   dependencies:
