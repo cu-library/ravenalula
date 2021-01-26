@@ -2,4 +2,8 @@ dl.list-group dt.list-group__link {
   margin: 15px 0px 5px 0px;
 }
 
+.c-nav--sidenav li a.is-active {
+  background: #eaeaea;
+}
+
 /*# sourceMappingURL=component.css.map */

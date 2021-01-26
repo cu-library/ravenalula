@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/component.scss"],"names":[],"mappings":"AAIE;EACE","file":"component.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/component.scss","../scss/vendor/rds/0.19.9/_vars.scss"],"names":[],"mappings":"AAIE;EACE;;;AAKJ;EACE,YC8DU","file":"component.css"}
