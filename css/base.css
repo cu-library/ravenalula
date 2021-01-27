@@ -3,5 +3,17 @@ details {
   border-radius: 4px;
   padding: 10px 20px;
 }
+details summary {
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (min-width: 761px) {
+  details summary {
+    font-size: 18px;
+  }
+}
+details[open] summary {
+  margin-bottom: 10px;
+}
 
 /*# sourceMappingURL=base.css.map */

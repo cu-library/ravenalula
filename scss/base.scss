@@ -1,7 +1,20 @@
-@use 'vendor/rds/0.19.9/_vars.scss' as rds;
+@use 'vendor/rds/0.21.1/_vars.scss' as rds;
+@import 'vendor/rds/0.21.1/_include-media.scss';
+// reintroduce the breakpoints var from rds in the global scope for include-media.
+$breakpoints: rds.$breakpoints;
 
 details {
   border: 1px solid rds.$grey-kenobi;
   border-radius: 4px;
   padding: 10px 20px;
+  summary {
+    font-size: rds.$pixel16;
+    font-weight: 500;
+    @include media('>s') {
+      font-size: rds.$pixel18;
+    }
+  }  
+  &[open] summary {
+    margin-bottom: 10px;
+  }
 }

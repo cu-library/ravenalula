@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Ravenalula theme.
+ */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ * 
+ * This function provides theme suggestions for form elements based on the type.
+ */
+function ravenalula_theme_suggestions_form_element_alter(&$suggestions, &$vars) {
+  if (isset($vars['element']['#type'])) {
+    $suggestions[] = 'form_element__' . $vars['element']['#type'];
+  }
+}
+

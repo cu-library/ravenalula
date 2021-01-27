@@ -1,4 +1,4 @@
-@use 'vendor/rds/0.19.9/_vars.scss' as rds;
+@use 'vendor/rds/0.21.1/_vars.scss' as rds;
 
 // List Groups, mostly used in the admin sections.
 dl.list-group {
@@ -12,3 +12,25 @@ dl.list-group {
   background: rds.$grey-yoda;
 }
 
+// p elements in form descriptions
+.form__description p {
+  font-size: inherit;
+}
+
+// Status messages
+.status-messages {
+  .status-message {
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: rds.$block-padding-m;
+    &.status-message-status { 
+      background-color: rds.$light-blue;
+    }
+    &.status-message-warning {
+      background-color: rds.$light-yellow;
+    } 
+    &.status-message-error {
+      background-color: rds.$light-red;
+    } 
+  }
+}

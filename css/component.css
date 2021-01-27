@@ -6,4 +6,23 @@ dl.list-group dt.list-group__link {
   background: #eaeaea;
 }
 
+.form__description p {
+  font-size: inherit;
+}
+
+.status-messages .status-message {
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.status-messages .status-message.status-message-status {
+  background-color: #e6f7ff;
+}
+.status-messages .status-message.status-message-warning {
+  background-color: #fffaf1;
+}
+.status-messages .status-message.status-message-error {
+  background-color: #f9e6e9;
+}
+
 /*# sourceMappingURL=component.css.map */

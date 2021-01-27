@@ -18,16 +18,17 @@ if [ ! -d "/tmp/rds/dist/$1" ]; then
 fi
 
 # Bundled .css file
-mkdir "$THEME_DIR/css/vendor/rds/$1"
-cp "/tmp/rds/dist/$1/rds-cu.css" "$THEME_DIR/css/vendor/rds/$1"
+mkdir -p "$THEME_DIR/css/vendor/rds/$1"
+cp "/tmp/rds/dist/$1/core.css" "$THEME_DIR/css/vendor/rds/$1"
 
 # Bundled .js file
-mkdir "$THEME_DIR/js/vendor/rds/$1"
-cp "/tmp/rds/dist/$1/rds-cu.js" "$THEME_DIR/js/vendor/rds/$1"
+mkdir -p "$THEME_DIR/js/vendor/rds/$1"
+cp "/tmp/rds/dist/$1/core.js" "$THEME_DIR/js/vendor/rds/$1"
 
-# Vendor SCSS file
-mkdir "$THEME_DIR/scss/vendor/rds/$1"
-cp "/tmp/rds/src/_core/scss/tools/_vars.scss" "$THEME_DIR/scss/vendor/rds/$1"
+# Vendor SCSS file and include-media library
+mkdir -p "$THEME_DIR/scss/vendor/rds/$1"
+cp "/tmp/rds/dist/_core/scss/tools/_vars.scss" "$THEME_DIR/scss/vendor/rds/$1"
+cp "/tmp/rds/dist/_core/scss/tools/_include-media.scss" "$THEME_DIR/scss/vendor/rds/$1"
 
 # Cleanup
 rm -rf /tmp/rds

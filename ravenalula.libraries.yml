@@ -1,9 +1,9 @@
 rds:
   css:
     base:
-      css/vendor/rds/0.19.9/rds-cu.css: {minified: true, weight: -1}
+      css/vendor/rds/0.21.1/core.css: {minified: true, weight: -1}
   js:
-    js/vendor/rds/0.19.9/rds-cu.js: {minified: true}
+    js/vendor/rds/0.21.1/core.js: {minified: true}
 font:
   css:
     base:
