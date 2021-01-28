@@ -3,11 +3,75 @@ dl.list-group dt.list-group__link {
 }
 
 .c-nav--sidenav li a.is-active {
-  background: #eaeaea;
+  background: #f3f3f3;
+}
+.c-nav--sidenav ul.sidenav-secondary {
+  margin-top: 20px;
+  border-left: 4px solid #e6f7ff;
+}
+.c-nav--sidenav ul.sidenav-secondary a {
+  font-weight: 400;
+}
+.c-nav--sidenav ul.sidenav-secondary a.is-active {
+  background: #e6f7ff;
+}
+.c-nav--sidenav ul.sidenav-actions {
+  margin-top: 20px;
+}
+.c-nav--sidenav ul.sidenav-actions a {
+  color: #105f83;
 }
 
+.form__group + .form__description {
+  margin-top: 10px;
+}
+
+summary + .form__description {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.form__field--textarea + .form-wrapper a {
+  position: relative;
+  top: -25px;
+}
+
+a.token-dialog {
+  position: relative;
+  top: -25px;
+}
+
+.form__description {
+  margin-top: 10px;
+  line-height: 1.8;
+}
 .form__description p {
   font-size: inherit;
+}
+
+select.form-select {
+  min-width: 150px;
+}
+
+.form__field .button {
+  margin-bottom: 10px;
+  background: #e6f7ff;
+}
+.form__field .button:last-of-type {
+  margin-bottom: 0px;
+}
+.form__field .button:hover {
+  background: #91d5ff;
+}
+.form__field .button.button--danger {
+  background: #fffaf1;
+}
+.form__field .button.button--danger:hover {
+  background: #faab08;
+}
+
+.toolbar-menu-administration.form__field {
+  margin: inherit;
 }
 
 .status-messages .status-message {

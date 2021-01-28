@@ -7,14 +7,83 @@ dl.list-group {
   }
 }
 
-// Side nav active
-.c-nav--sidenav li a.is-active {
-  background: rds.$grey-yoda;
+// Side nav
+.c-nav--sidenav {
+  li a.is-active {
+    background: rds.$grey;
+  }
+  ul.sidenav-secondary {
+    margin-top: 20px;
+    border-left: 4px solid rds.$light-blue;
+    a {
+      font-weight: 400;
+      &.is-active {
+        background: rds.$light-blue;
+      }
+    }
+  }
+  ul.sidenav-actions {
+    margin-top: 20px;
+    a {
+      color: rds.$link;
+    }
+  }
 }
 
-// p elements in form descriptions
-.form__description p {
-  font-size: inherit;
+// Forms
+.form__group + .form__description {
+  margin-top: 10px;
+}
+summary + .form__description {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+// Help link for text formats
+.form__field--textarea + .form-wrapper a {
+  position: relative;
+  top: -25px;
+}
+
+// Form elements with token browse links
+a.token-dialog {
+  position: relative;
+  top: -25px;
+}
+
+//Form descriptions
+.form__description {
+  margin-top: 10px;
+  line-height: 1.8;
+  p {
+    font-size: inherit;
+  }
+}
+
+select.form-select {
+  min-width: 150px;
+}
+
+// Buttons
+.form__field .button {
+  margin-bottom: 10px;
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+  background: rds.$light-blue;
+  &:hover {
+    background: rds.$blue;
+  }
+  &.button--danger {
+    background: rds.$light-yellow;
+    &:hover {
+      background: rds.$yellow;
+    }
+  }
+}
+
+// Container in toolbar
+.toolbar-menu-administration.form__field {
+  margin: inherit;
 }
 
 // Status messages
