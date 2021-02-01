@@ -43,14 +43,12 @@ summary + .form__description {
   position: relative;
   top: -25px;
 }
-
 // Form elements with token browse links
 a.token-dialog {
   position: relative;
   top: -25px;
 }
-
-//Form descriptions
+// Form descriptions
 .form__description {
   margin-top: 10px;
   line-height: 1.8;
@@ -58,15 +56,16 @@ a.token-dialog {
     font-size: inherit;
   }
 }
-
+// Give select UI enough room
 select.form-select {
   min-width: 150px;
 }
-
 // Buttons
 .form__field .button {
+  font-family: inherit;
+  cursor: pointer;
   margin-bottom: 10px;
-  &:last-of-type {
+  &:last-child {
     margin-bottom: 0px;
   }
   background: rds.$light-blue;
@@ -74,10 +73,56 @@ select.form-select {
     background: rds.$blue;
   }
   &.button--danger {
-    background: rds.$light-yellow;
+    background: rds.$light-red;
     &:hover {
-      background: rds.$yellow;
+      background: #e8a0ab;
     }
+  }
+}
+.b-content .form__field a.button {
+  display: block;
+  width: 100%;
+  font-size: rds.$pixel16;
+  font-weight: 400;
+  border: 1px solid rds.$grey-kenobi;
+  border-radius: 4px;
+  padding: 15px;
+  text-align: center;
+  max-width: 500px;
+  color: inherit;
+  &:hover {
+    border: inherit;
+    color: inherit;
+  }
+  &:not(.c-buttoncta):hover:not(.u-icon):not(.c-buttoncta).button--danger {
+    border: 1px solid rds.$grey-kenobi;
+    background: #e8a0ab;
+    color: inherit;
+  }  
+}
+
+// Table fixes
+.b-form table .form__field.form-no-label.form__field--checkbox input {
+  margin-top: 4px;
+}
+
+// System modules fixes
+.system-modules td.description details {
+  white-space: inherit;
+  margin: 0;
+  height: auto;
+  padding-top: 0;
+}
+
+// Form elements without labels
+.form__field.form-no-label {
+  &.form__field--checkbox {
+    input {
+      opacity: inherit;
+    }
+  }
+  .form__group {
+    margin-top: inherit;
   }
 }
 
@@ -101,5 +146,25 @@ select.form-select {
     &.status-message-error {
       background-color: rds.$light-red;
     } 
+  }
+}
+
+// Help region
+#block-ravenalula-help {
+  margin-bottom: rds.$block-padding-m;
+}
+
+// Table order handles
+tr.draggable td {
+  box-sizing: content-box;
+  .handle {
+    margin: -0.5em 0.5em 0;
+  }
+  a.tabledrag-handle:not(.u-icon):not(.c-buttoncta) {
+    box-sizing: content-box;
+    border-bottom: none;
+  }
+  a.tabledrag-handle:not(.c-buttoncta):hover:not(.u-icon):not(.c-buttoncta) {
+    border-bottom: none;
   }
 }

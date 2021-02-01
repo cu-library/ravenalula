@@ -54,20 +54,62 @@ select.form-select {
 }
 
 .form__field .button {
+  font-family: inherit;
+  cursor: pointer;
   margin-bottom: 10px;
   background: #e6f7ff;
 }
-.form__field .button:last-of-type {
+.form__field .button:last-child {
   margin-bottom: 0px;
 }
 .form__field .button:hover {
   background: #91d5ff;
 }
 .form__field .button.button--danger {
-  background: #fffaf1;
+  background: #f9e6e9;
 }
 .form__field .button.button--danger:hover {
-  background: #faab08;
+  background: #e8a0ab;
+}
+
+.b-content .form__field a.button {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  padding: 15px;
+  text-align: center;
+  max-width: 500px;
+  color: inherit;
+}
+.b-content .form__field a.button:hover {
+  border: inherit;
+  color: inherit;
+}
+.b-content .form__field a.button:not(.c-buttoncta):hover:not(.u-icon):not(.c-buttoncta).button--danger {
+  border: 1px solid #dfdfdf;
+  background: #e8a0ab;
+  color: inherit;
+}
+
+.b-form table .form__field.form-no-label.form__field--checkbox input {
+  margin-top: 4px;
+}
+
+.system-modules td.description details {
+  white-space: inherit;
+  margin: 0;
+  height: auto;
+  padding-top: 0;
+}
+
+.form__field.form-no-label.form__field--checkbox input {
+  opacity: inherit;
+}
+.form__field.form-no-label .form__group {
+  margin-top: inherit;
 }
 
 .toolbar-menu-administration.form__field {
@@ -87,6 +129,24 @@ select.form-select {
 }
 .status-messages .status-message.status-message-error {
   background-color: #f9e6e9;
+}
+
+#block-ravenalula-help {
+  margin-bottom: 30px;
+}
+
+tr.draggable td {
+  box-sizing: content-box;
+}
+tr.draggable td .handle {
+  margin: -0.5em 0.5em 0;
+}
+tr.draggable td a.tabledrag-handle:not(.u-icon):not(.c-buttoncta) {
+  box-sizing: content-box;
+  border-bottom: none;
+}
+tr.draggable td a.tabledrag-handle:not(.c-buttoncta):hover:not(.u-icon):not(.c-buttoncta) {
+  border-bottom: none;
 }
 
 /*# sourceMappingURL=component.css.map */
