@@ -3,6 +3,16 @@
 // reintroduce the breakpoints var from rds in the global scope for include-media.
 $breakpoints: rds.$breakpoints;
 
+article {
+  font-size: rds.$pixel16; 
+  line-height: 1.7;
+
+  @include media('>=s') {
+    font-size: rds.$pixel18; // TODO: can we remove this and increase it to 18 in _reboot?
+    line-height: 1.8;
+  }
+}
+
 details {
   border: 1px solid rds.$grey-kenobi;
   border-radius: 4px;
@@ -16,5 +26,17 @@ details {
   }  
   &[open] summary {
     margin-bottom: 10px;
+  }
+}
+
+fieldset {
+  padding: 0.5em 0.75em;
+}
+
+legend {
+  font-size: rds.$pixel16;
+  font-weight: 500;
+  @include media('>s') {
+    font-size: rds.$pixel18;
   }
 }

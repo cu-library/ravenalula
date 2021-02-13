@@ -1,3 +1,14 @@
+article {
+  font-size: 16px;
+  line-height: 1.7;
+}
+@media (min-width: 760px) {
+  article {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+}
+
 details {
   border: 1px solid #dfdfdf;
   border-radius: 4px;
@@ -14,6 +25,20 @@ details summary {
 }
 details[open] summary {
   margin-bottom: 10px;
+}
+
+fieldset {
+  padding: 0.5em 0.75em;
+}
+
+legend {
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (min-width: 761px) {
+  legend {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=base.css.map */

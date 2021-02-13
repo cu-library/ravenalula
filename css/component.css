@@ -149,4 +149,18 @@ tr.draggable td a.tabledrag-handle:not(.c-buttoncta):hover:not(.u-icon):not(.c-b
   border-bottom: none;
 }
 
+.connect-box {
+  border: 2px solid #ccc;
+  font-size: 1.25em;
+  line-height: 1;
+  padding: 1em;
+}
+.connect-box .connect-box-list {
+  margin-top: 5px;
+}
+.connect-box .field_database_trial_feedback {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
 /*# sourceMappingURL=component.css.map */

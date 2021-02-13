@@ -63,6 +63,9 @@
 {% set aside_second_rendered = page.aside_second|render %}
 {% set aside_second_exists = aside_second_rendered|striptags('<img><video><drupal-render-placeholder>')|trim is not empty %}
 
+<!-- {{ aside_first_exists }} -->
+<!-- {{ aside_second_exists }} -->
+
 
 {% if aside_first_exists or aside_second_exists %}
 <div class="l-multicol l-multicol--{% if aside_first_exists %}a{% endif %}m{% if aside_second_exists %}a{% endif %}">

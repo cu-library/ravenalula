@@ -168,3 +168,23 @@ tr.draggable td {
     border-bottom: none;
   }
 }
+
+// Database pages
+.connect-box {
+  border: 2px solid #ccc;
+  font-size: 1.25em;
+  line-height: 1;
+  padding: 1em;
+
+  .connect-box-list-label {
+  }
+
+  .connect-box-list {
+    margin-top: 5px;
+  }
+
+  .field_database_trial_feedback {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+}
