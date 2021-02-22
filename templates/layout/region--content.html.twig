@@ -13,11 +13,16 @@
  */
 #}
 {% if content %}
-<div class="u-block u-block--white">
-  <div class="b-content">
-    <div{{ attributes }}>
+  {%
+    set classes =  [
+      'u-block',
+      'u-block--white',
+      'region--content',
+    ]
+  %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="b-content">
       {{ content }}
     </div>
   </div>
-</div>
 {% endif %}

@@ -1,1 +1,13 @@
 @use 'vendor/rds/0.21.1/_vars.scss' as rds;
+@import 'vendor/rds/0.21.1/_include-media.scss';
+// reintroduce the breakpoints var from rds in the global scope for include-media.
+$breakpoints: rds.$breakpoints;
+
+.region--precontent .u-block{
+  padding: 0 rds.$block-padding-s;
+ 
+  @include media('>s') {
+    padding: 0;
+  }
+}
+

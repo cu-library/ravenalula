@@ -25,14 +25,7 @@
  * @see template_preprocess_block()
  */
 #}
-{%
-  set classes = [
-    'multicol__nav',
-    'b-menu',
-    'b-menu--sidenav',
-  ]
-%}
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>

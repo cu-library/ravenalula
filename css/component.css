@@ -2,24 +2,43 @@ dl.list-group dt.list-group__link {
   margin: 15px 0px 5px 0px;
 }
 
-.c-nav--sidenav li a.is-active {
+#block-ravenalula-local-tasks ul.local-tasks-primary {
+  display: flex;
+  list-style: none;
+  margin-left: 0;
+}
+#block-ravenalula-local-tasks ul.local-tasks-primary li {
+  display: flex;
+  margin-right: 3px;
+}
+#block-ravenalula-local-tasks ul.local-tasks-primary li a {
+  padding: 4px 1em;
   background: #f3f3f3;
-}
-.c-nav--sidenav ul.sidenav-secondary {
-  margin-top: 20px;
-  border-left: 4px solid #e6f7ff;
-}
-.c-nav--sidenav ul.sidenav-secondary a {
-  font-weight: 400;
-}
-.c-nav--sidenav ul.sidenav-secondary a.is-active {
-  background: #e6f7ff;
-}
-.c-nav--sidenav ul.sidenav-actions {
-  margin-top: 20px;
-}
-.c-nav--sidenav ul.sidenav-actions a {
   color: #105f83;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0px -1px 2px rgba(34, 34, 34, 0.2);
+}
+#block-ravenalula-local-tasks ul.local-tasks-primary li a.is-active {
+  background: white;
+}
+#block-ravenalula-local-tasks ul.local-tasks-primary li a:hover {
+  color: #bf112b;
+}
+#block-ravenalula-local-tasks ul.local-tasks-secondary {
+  margin-top: 25px;
+  display: flex;
+  list-style: none;
+  margin-left: 0;
+}
+#block-ravenalula-local-tasks ul.local-tasks-secondary a {
+  padding: 4px 1em;
+  color: #105f83;
+}
+#block-ravenalula-local-tasks ul.local-tasks-secondary a.is-active {
+  border-bottom: thin solid #105f83;
+}
+#block-ravenalula-local-tasks ul.local-tasks-secondary a:hover {
+  color: #bf112b;
 }
 
 .form__group + .form__description {

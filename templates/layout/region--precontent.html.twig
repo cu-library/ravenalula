@@ -13,11 +13,12 @@
  */
 #}
 {% if content %}
-<div class="u-block u-block--white">
-  <div class="b-content">
-    <div{{ attributes }}>
-      {{ content }}
-    </div>
+  {%
+    set classes =  [
+      'region--precontent',
+    ]
+  %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
   </div>
-</div>
 {% endif %}

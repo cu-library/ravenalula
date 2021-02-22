@@ -14,12 +14,13 @@
 #}
 {% if content %}
   {%
-    set banner_classes =  [
+    set classes =  [
       'u-block',
       'u-block--grey',
+      'region--content',
     ]
   %}
-  <div{{ attributes.addClass(banner_classes) }}>
+  <div{{ attributes.addClass(classes) }}>
     <div class="b-banner">
       <section>
         {{ content }}

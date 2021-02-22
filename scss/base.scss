@@ -7,7 +7,7 @@ article {
   font-size: rds.$pixel16; 
   line-height: 1.7;
 
-  @include media('>=s') {
+  @include media('>s') {
     font-size: rds.$pixel18; // TODO: can we remove this and increase it to 18 in _reboot?
     line-height: 1.8;
   }
