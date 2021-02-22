@@ -11,3 +11,8 @@ $breakpoints: rds.$breakpoints;
   }
 }
 
+.region--content {
+  ul:last-child, ol:last-child, p:last-child {
+    margin-bottom: 25px;
+  }
+}

@@ -7,4 +7,8 @@
   }
 }
 
+.region--content ul:last-child, .region--content ol:last-child, .region--content p:last-child {
+  margin-bottom: 25px;
+}
+
 /*# sourceMappingURL=layout.css.map */
