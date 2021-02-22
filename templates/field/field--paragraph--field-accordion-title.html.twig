@@ -36,47 +36,6 @@
  * @see template_preprocess_field()
  */
 #}
-{%
-  set title_classes = [
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
-
-{% if label_hidden %}
-  {% if multiple %}
-    <div{{ attributes }}>
-      {% for item in items %}
-        <div{{ item.attributes }}>{{ item.content }}</div>
-      {% endfor %}
-    </div>
-  {% else %}
-    {% for item in items %}
-      <h2><div{{ attributes }}>{{ item.content }}</div></h2>
-    {% endfor %}
-  {% endif %}
-{% else %}
-  <div{{ attributes }}>
-    {% if label_display != 'inline' %}
-      <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% endif %} 
-    {% if multiple %}
-      <div>
-        {% if label_display == 'inline' %}
-          <span {{ title_attributes.addClass(title_classes) }}>{{ label }}:</span>
-        {% endif %}
-        {% for item in items %}
-          <div{{ item.attributes }}>{{ item.content }}</div>
-        {% endfor %}
-      </div>
-    {% else %}
-      {% for item in items %}
-        <div{{ item.attributes }}> 
-          {% if label_display == 'inline' %}
-            <span {{ title_attributes.addClass(title_classes) }}>{{ label }}:</span>
-          {% endif %}
-          {{ item.content }}
-        </div>
-      {% endfor %}
-    {% endif %}
-  </div>
-{% endif %}
+{% for item in items %}
+  {{ item.content }}
+{% endfor %}
