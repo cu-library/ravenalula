@@ -163,4 +163,14 @@ tr.draggable td a.tabledrag-handle:not(.c-buttoncta):hover:not(.u-icon):not(.c-b
   margin-bottom: 5px;
 }
 
+.key-resources {
+  border: thin #eee solid;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.paragraph--type--key-resources {
+  margin-bottom: 1em;
+}
+
 /*# sourceMappingURL=component.css.map */
