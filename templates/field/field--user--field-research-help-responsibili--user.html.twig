@@ -57,16 +57,18 @@
 {% else %}
   <div{{ attributes }}>
     {% if label_display != 'inline' %}
-      <div{{ title_attributes.addClass(title_classes) }}><strong>{{ label }}:</strong></div>
+      <div{{ title_attributes.addClass(title_classes) }}><strong>{{ label }}</strong></div>
     {% endif %} 
     {% if multiple %}
       <div>
         {% if label_display == 'inline' %}
           <span {{ title_attributes.addClass(title_classes) }}><strong>{{ label }}:</strong></span>
         {% endif %}
+        <ul>
         {% for item in items %}
-          <div{{ item.attributes }}>{{ item.content }}</div>
+          <li{{ item.attributes }}>{{ item.content }}</li>
         {% endfor %}
+         </ul>
       </div>
     {% else %}
       {% for item in items %}

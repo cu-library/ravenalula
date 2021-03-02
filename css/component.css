@@ -192,4 +192,13 @@ tr.draggable td a.tabledrag-handle:not(.c-buttoncta):hover:not(.u-icon):not(.c-b
   margin-bottom: 1em;
 }
 
+.user img {
+  float: right;
+}
+
+fieldset.user-about {
+  clear: both;
+  margin-top: 2em;
+}
+
 /*# sourceMappingURL=component.css.map */
